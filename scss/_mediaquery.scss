@@ -1,0 +1,235 @@
+
+@media (min-width: 768px) {
+    
+    .headerContainer {
+        height: 50vh;
+        width: auto;
+    }
+
+   
+    .btnSection {
+        color: $white;
+        width: 100%;
+        height: 100%;
+    
+    }
+
+    @for $i from 1 through 4 {
+        .section#{$i} {width: 25%; min-width: 192px; height: 40vh; min-width: 192px;}
+    }
+    
+    
+    .mainContainer {
+        @include displayFlex (center, center, row);
+        
+    }
+
+/* Pages */
+
+    .mainContainerPages {
+        @include displayFlex (center, center, row);
+        width: 100%;
+        background-color: $white;
+    }
+
+    .sectionArticle {
+
+        & h3 {
+        color: $blue;
+        font-size: map-get($map: $fontSize, $key: 25);
+        font-weight: 400;
+        margin-bottom: 10px;
+        }
+
+        & img {
+            width: 100px;
+        }
+    }
+       
+
+
+    .sectionPicture {
+        height: 81vh;
+        background-position: right;
+    }
+
+    .footerContent {
+        @include displayFlex (center, space-around, row);
+        height: 10vh;
+        color: $white;
+        background-color: $grey;
+
+        & img {
+            width: 25px;
+            margin: 10px;
+            justify-content: space-between;
+        }
+
+    }
+
+    .footerContentPages {
+        justify-content: space-around;
+    }
+
+    .footerContentPages p {
+        display: contents;
+    }
+
+/* end Pages */
+
+/** Contacto **/
+
+.formContacto {
+    padding: 40px;
+}
+
+    
+}
+
+@media (min-width: 1024px) {
+
+    .headerPages {
+        width: 100%;
+        height: 8vh;
+        
+    }
+
+    .headerContainer {
+        height: 68vh;
+    }
+
+    .heroText {
+        width: 100%;
+        color: $white;
+        font-weight: 400;
+        text-align: center;
+    
+        h1 {
+            font-weight: 600;
+            font-size: map-get($map: $fontSize, $key: 50);
+            text-shadow: none;
+        }
+    
+        h2 {
+            font-weight: 600;
+            font-size: map-get($map: $fontSize, $key: 20);
+            text-shadow: none;
+        }
+
+    }
+    
+    .mainContainer {
+        @include displayFlex (center, center, row);
+        display: flex;
+        width: 100%;
+    }
+
+    .sectionPicture {
+        height: 80vh;
+    }
+
+    
+/* clase base */
+
+    .section {
+        width: 18%;
+        min-width: 220px;
+        margin: 40px 8px;
+        padding: 0;
+    
+        &:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s;
+        }
+    }
+
+    @for $i from 1 through 4 {
+        .section#{$i}{@extend .section;}
+    }
+   
+
+   .btnSection {
+    width: 18vw;
+    min-width: 220px;
+    height: 42vh;
+    
+
+        &:hover {
+            background-color: $blue;
+        }
+
+        &.drk:hover {
+            background-color: $drkBlue;
+        }
+    
+        h3 {
+            font-size: map-get($map: $fontSize, $key: 15);
+            font-weight: 600;
+            margin: 0px auto; 
+            margin-bottom: 30px;
+        }
+
+        p {
+            display:initial;
+            margin: 0 auto;
+            width: 75%;
+            text-align: center;
+            font-size: map-get($map: $fontSize, $key: 10);
+        }
+    }
+
+.iconSection {
+    width: 80px;
+  
+
+}
+
+.footerContent {
+    height: 15vh;
+    margin-top: 30px;
+
+    img {
+        width: 32px;
+        margin-top: 10px;
+        justify-content: space-around;
+    }
+}
+    
+
+/* contacto */
+
+.pictureContacto {
+    grid-area: pictureContacto;
+    
+}
+
+.formContacto {
+    grid-area: formContacto;
+    width: 100%;
+    padding: 40px;
+
+}
+
+.mapContacto {
+    grid-area: mapContacto;
+    width: auto;
+    height: auto;
+    
+}
+
+.mainContacto {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40vh auto;
+    grid-template-areas: 
+    "pictureContacto formContacto"
+    "mapContacto formContacto";
+}
+
+.formContacto {
+    padding: 40px;
+    margin-top: -10px;
+}
+
+}

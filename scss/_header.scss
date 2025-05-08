@@ -1,0 +1,31 @@
+.headerContainer {
+    @include displayFlex (center, center, column);
+    width: 100%;
+    background-image: url("../img/heroBG3.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position:top;
+    height: 380px;
+
+ 
+}
+
+.heroText {
+    width: 100%;
+    color: rgb(256, 256, 256);
+    font-weight: 400;
+    text-align: center;
+
+    h1 {
+        font-weight: 400;
+        font-size: map-get($map: $fontSize, $key: 30);
+        text-shadow: 0.01em 0.01em 0.1em $grey;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: map-get($map: $fontSize, $key: 18);
+        text-shadow: 0.01em 0.01em 0.1em $grey;
+    }
+
+}

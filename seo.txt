@@ -1,0 +1,7 @@
+*** Desafío SEO ***
+
+- Se agrega "title" personalizado a cada html
+- Se agrega "meta description" personalizado a cada html
+- Se agrega "meta keywords" personlaizado a cada html
+- Se modifican los "alt" de las imagenes realizandolos mas descriptivos
+- Se optimiza el tamaño de las imágenes

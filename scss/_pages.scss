@@ -1,0 +1,250 @@
+/** Pages-header**/ 
+
+.headerPages {
+    width: 100%;
+    height: 7vh;
+    
+}
+
+
+/** Pages-Nav**/
+
+.bgColorNavPages {
+    background-color: $grey;
+}
+
+.bgColorNavPages ul a {
+    color: $white;
+
+    &:hover {
+        font-weight: 600;
+        color: $white;
+    }
+}
+
+
+
+/** Pages-Main**/
+
+.mainContainerPages {
+    width: 100%;
+    background-color: $white;
+    line-height: 0.3em;
+}
+
+    
+.sectionArticle {
+    @include displayFlex (center, center, column);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    background-color: $white;
+
+    h3 {
+        color: $blue;
+        font-size: map-get($map: $fontSize, $key: 20);
+        font-weight: 600;
+    }
+        
+    h4 {
+        color: $drkBlue;
+        font-size: map-get($map: $fontSize, $key: 20);
+        font-weight: 600;
+        
+    }
+
+}
+
+    .sectionArticle img {
+        width: 100px;
+    
+    }
+
+    .sectionArticleText {
+        margin-bottom: 20px;
+
+        p {
+            color: $grey;
+            font-size: map-get($map: $fontSize, $key: 10);
+            font-weight: 400;
+            text-align: center;
+            font-style: italic;
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 350px;
+            line-height: 25px;
+            
+        }
+    }
+
+        
+.btnCustom {
+    background-color: $blue;
+    border: 0px;
+    padding: 10px;
+
+    &.drk {
+        background-color: $drkBlue;
+    }
+
+    &:hover {
+        background-color: $ligthBlue;
+    }
+
+    a {
+        color: $white;
+    }
+}
+
+
+.sectionPicture {
+    width: 100%;
+    height: 42vh;
+    background-image: url(../img/servicios2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    &.diagnostico {
+        background-image: url(../img/taller.jpg);
+        background-position: center;
+        transform: scaleX(-1);
+    }
+
+    &.nosotros {
+        background-image: url(../img/nosotros1.jpg);
+        background-position: center;
+    }
+}
+
+
+/**Pages-Footer**/
+
+.footerContentPages {
+    @include displayFlex (center, center, row);
+    width: 100%;
+    height: 12vh;
+    color: $white;
+    background-color: $grey;
+
+    p {
+        display: none;
+    }
+
+    img {
+        width: 25px;
+        margin: 10px;
+        justify-content: space-between;
+        transition: background-color 0.7s;
+
+        &:hover {
+            scale: 140%;
+        }
+    }
+}
+
+/** Contacto **/
+
+.headerContacto {
+    width: 100%;
+    height: 10vh;
+}
+
+form {
+    @include displayFlex(center, center, column);
+    width: 100%; 
+    background-color: $white;
+}
+.mainContacto {
+    width: 100%;
+    height: auto;
+
+}
+
+.pictureContacto {
+    @include displayFlex(center, center, column);
+    width: 100%; 
+    height: auto;
+    background-color: $white;
+
+    h3 {
+        color: $drkBlue;
+        font-size: map-get($map: $fontSize, $key: 20);
+        font-weight: 600;
+        padding-top: 10px;
+    }
+}
+
+
+.mapContacto {
+    height: 45vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.formContacto {
+    @include displayFlex(center, center, column);
+    width: 100%;
+    height: auto;   
+    padding: 20px;
+    margin: 0;
+    background-color: $drkBlue;
+    
+}
+
+   .formGroup {
+        @include displayFlex(center, center, column);
+        max-width: 500px;
+        height: auto;
+        background-color: $white;
+        
+        p {
+            color: $grey;
+            font-size:  map-get($map: $fontSize, $key: 10);
+            padding: 10px;         
+        }
+   }    
+
+    .field{
+        padding: 10px;
+        margin: 10px;
+        width: 70vw;
+        max-width: 400px;
+    }
+
+    .check {
+        @include displayFlex(center, space-around, row);
+        padding: 10px;
+
+    }
+
+
+    .formbtn {
+        width: 100px;
+        height: 40px;
+        margin: 5px;
+    }
+
+    .btn-secondary{
+        background-color: $drkBlue;
+        &:hover {
+            background-color: $ligthBlue;
+        }
+        &:focus {
+            background-color: $ligthBlue;
+        }
+    }
+
+    .modal-title {
+       text-align: right;
+    }
+
+    .textAreaSize {
+        width: 75vw;
+        max-width: 400px;
+        height: 20vh;
+        resize: none;
+    }
+
+/* end contacto*/
